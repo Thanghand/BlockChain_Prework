@@ -25,6 +25,8 @@ $: go get github.com/Thanghand/blockchain
 ```
 $: cd /restapi 
 
+$: go get github.com/Thanghand/blockchain
+
 $: go build
 
 $: ./restapi
