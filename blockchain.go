@@ -35,15 +35,21 @@ func NewBlock(oldBlock Block, data string) Block {
 }
 
 // AddBlock adds a new block to the Blockchain.
-func AddBlock(b Block) error {
+func AddBlock(newBlock Block) error {
 
 	lastBlock := Blockchain[len(Blockchain)-1]
-	if bytes.Compare(b.PrevHash, lastBlock.calculateHash()) != 0 {
+	if bytes.Compare(newBlock.PrevHash, lastBlock.calculateHash()) != 0 {
 		return errors.New("New Block does not match preHash with OldBlock")
 	}
-	Blockchain = append(Blockchain, b)
+	Blockchain = append(Blockchain, newBlock)
 
 	return nil
+}
+
+// GetLastBlock get the last block.
+func GetLastBlock() Block{
+	lastBlock := Blockchain[len(Blockchain)-1]
+	return lastBlock
 }
 
 func (b *Block) calculateHash() []byte {
@@ -53,3 +59,4 @@ func (b *Block) calculateHash() []byte {
 	hash := sha256.Sum256(headers)
 	return hash[:]
 }
+
