@@ -8,6 +8,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/Thanghand/blockchain"
 	"encoding/base64"
+	"fmt"
 )
 
 
@@ -16,10 +17,12 @@ func main() {
 	blockchain.InitBlockchain()
 
 	// Init Router
+	fmt.Printf("Server started with port 8069")
 	router := mux.NewRouter()
 	router.HandleFunc("/blockchain", AddNewBlockAPI).Methods("POST")
 	router.HandleFunc("/blockchain/lastBlock", GetLastBlockAPI).Methods("GET")
 	log.Fatal(http.ListenAndServe(":8069", router))
+	
 }
 
 // BlockRequest is request block 
@@ -35,7 +38,7 @@ type ResponseBlockChain struct {
 }
 // AddNewBlockAPI router 
 func AddNewBlockAPI (w http.ResponseWriter, r *http.Request){
-	// params := mux.Vars(r)
+
 	var blockRequest BlockRequest
 	var response ResponseBlockChain
 	_ = json.NewDecoder(r.Body).Decode(&blockRequest)
