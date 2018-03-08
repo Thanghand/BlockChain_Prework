@@ -79,11 +79,9 @@ $: ./restapi
 ```
 
 * POST MAN: 
-<img width="600" alt="screen shot 2018-03-08 at 8 20 45 pm" src="https://user-images.githubusercontent.com/8011261/37153190-76d7ecf4-230e-11e8-9fc2-9894eed3a733.png">
 
+<img width="1280" alt="screen shot 2018-03-08 at 8 36 57 pm" src="https://user-images.githubusercontent.com/8011261/37153893-bfa9e516-2310-11e8-9fc2-fdf9b5113303.png">
 
-<img width="600" alt="screen shot 2018-03-08 at 8 21 06 pm" src="https://user-images.githubusercontent.com/8011261/37153205-8194054c-230e-11e8-85b4-e35645cd3eaf.png">
+<img width="1280" alt="screen shot 2018-03-08 at 8 37 23 pm" src="https://user-images.githubusercontent.com/8011261/37153956-03f109de-2311-11e8-90c3-4d34f6be3068.png">
 
-
-<img width="600" alt="screen shot 2018-03-08 at 8 21 19 pm" src="https://user-images.githubusercontent.com/8011261/37153222-92b87b14-230e-11e8-86a2-a1c7efbc9222.png">
 
